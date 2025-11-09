@@ -1,0 +1,143 @@
+/* @theme academic-tcue */
+
+@import 'gaia';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+  --color-background: #F6F9F6;
+  --color-foreground: #333;
+  --color-highlight: #006a00 ;
+  --color-tcue1: #3E3A39;
+  --color-tcue2: #006a00;
+  --color-tcue3: #b8e0b8;
+  --color-tcue4: #e0b8e0;
+  --color-tcue5: #6a006a;
+}
+h1 {
+  font-size: 48px;
+  color: var(--color-tcue1);
+  font-weight: bold;
+}
+h2 {
+  font-size: 36px;
+  color: var(--color-tcue2);
+  border-bottom: 2px solid var(--color-tcue3);
+}
+h3 {
+  font-size: 28px;
+  color: var(--color-tcue1);
+}
+p {
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+section {
+  background-image: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding-top: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* https://github.com/marp-team/marpit/issues/271 */
+section::after {
+  font-weight: 700;
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+}
+
+ul ul {
+  font-size: 0.9em;
+}
+
+section.lead h1 {
+  color: var(--color-tcue2);
+  text-align: left;
+}
+section.lead h1 strong {
+  -webkit-text-stroke: 1px var(--color-tcue2);
+}
+section.lead h2 {
+  color: var(--color-tcue2);
+  text-align: left;
+}
+section.lead h2 strong {
+  -webkit-text-stroke: 1px var(--color-tcue2);
+}
+section.lead h3 {
+  color: var(--color-tcue2);
+  text-align: left;
+}
+section.lead h3 strong {
+  -webkit-text-stroke: 1px var(--color-tcue2);
+}
+section.lead h4 {
+  color: var(--color-tcue2);
+  text-align: left;
+}
+section.lead h4 strong {
+  -webkit-text-stroke: 1px var(--color-tcue2);
+}
+section.lead h5 {
+  color: var(--color-tcue2);
+  text-align: left;
+}
+section.lead h5 strong {
+  -webkit-text-stroke: 1px var(--color-tcue2);
+}
+section.lead p {
+  text-align: right;
+}
+section.lead {
+background-image: url(https://raw.githubusercontent.com/moiku/marp-theme-academic/refs/heads/main/images/bg-tcue.png);
+}
+
+header {
+  background-color: var(--color-tcue2);
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+} 
+
+blockquote {
+  max-width: 90%;
+  border-top: 0.1em dashed #555;
+  font-size: 60%;
+  position: absolute;
+  bottom: 20px;
+}
+blockquote::before {
+  content: "";
+}
+blockquote::after {
+  content: "";
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+table {
+  font-size: 24pt;
+  margin: auto;
+}
+code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.marker {
+    font-size: inherit;
+    background: linear-gradient(transparent 80%, var(--color-tcue4) 60%);
+    padding: 0 2px;
+}
+
+.bubble {
+    position: relative;
+    background-color: white;
+    border: 2px solid var(--color-tcue2);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem 0;
+}

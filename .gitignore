@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+.env
+.vscode/
+.idea/
+*.log
+coverage/
+*.tmp
+*.bak
+*.swp
+Thumbs.dbinfomation/search_results_v8.pdf
+document/stage3
+infomation/

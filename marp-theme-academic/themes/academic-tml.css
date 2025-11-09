@@ -1,0 +1,211 @@
+/* @theme academic-tml */
+
+@import "gaia";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+:root {
+  --color-background: #f6f9f6;
+  --color-foreground: #333;
+  --color-highlight: #0a2d92;
+  --color-nut1: #3e3a39;
+  --color-nut2: #0a2d92;
+  --color-nut3: #a5b8e8;
+  --color-nut4: #ffadb1;
+  --color-nut5: #e60012;
+}
+h1 {
+  font-size: 44px;
+  color: var(--color-nut1);
+  font-weight: bold;
+}
+h2 {
+  font-size: 34px;
+  color: var(--color-nut2);
+  border-bottom: 2px solid var(--color-nut3);
+}
+h3 {
+  font-size: 30px;
+  color: var(--color-nut1);
+}
+p {
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+section {
+  background-image: none;
+  font-family: "Noto Sans JP", sans-serif;
+  padding-top: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* https://github.com/marp-team/marpit/issues/271 */
+section::after {
+  font-weight: 700;
+  content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
+}
+
+ul ul {
+  font-size: 22px;
+}
+
+section.lead h1 {
+  color: var(--color-nut2);
+  text-align: left;
+}
+section.lead h1 strong {
+  -webkit-text-stroke: 1px var(--color-nut2);
+}
+section.lead h2 {
+  color: var(--color-nut2);
+  text-align: left;
+}
+section.lead h2 strong {
+  -webkit-text-stroke: 1px var(--color-nut2);
+}
+section.lead h3 {
+  color: var(--color-nut2);
+  text-align: left;
+}
+section.lead h3 strong {
+  -webkit-text-stroke: 1px var(--color-nut2);
+}
+section.lead h4 {
+  color: var(--color-nut2);
+  text-align: left;
+}
+section.lead h4 strong {
+  -webkit-text-stroke: 1px var(--color-nut2);
+}
+section.lead h5 {
+  color: var(--color-nut2);
+  text-align: left;
+}
+section.lead h5 strong {
+  -webkit-text-stroke: 1px var(--color-nut2);
+}
+section.lead p {
+  text-align: right;
+}
+section.lead {
+  background-image: url(https://raw.githubusercontent.com/moiku/marp-theme-academic/refs/heads/main/images/bg-tml.png);
+}
+
+header {
+  background-color: var(--color-nut2);
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+blockquote {
+  max-width: 90%;
+  border-top: 0.1em dashed #555;
+  font-size: 22px;
+  position: absolute;
+  bottom: 22px;
+}
+blockquote,
+blockquote p {
+  font-size: 22px;
+}
+blockquote::before {
+  content: "";
+}
+blockquote::after {
+  content: "";
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+table {
+  font-size: 24pt;
+  margin: auto;
+}
+code {
+  font-family: "Source Code Pro", monospace;
+}
+
+.marker {
+  font-size: 22px;
+  background: linear-gradient(transparent 80%, var(--color-nut4) 40%);
+  padding: 0 2px;
+}
+
+.bubble {
+  position: relative;
+  background-color: white;
+  border: 2px solid var(--color-nut2);
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* =========================
+   Overrides for left-table layout (SOM detail slides)
+   - Avoid theme's table centering and ensure 40% right column images fill the cell
+   - Scoped to section.left-table only, so other slides remain unaffected
+   ========================= */
+section.left-table table {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+section.left-table table.layout-table {
+  width: 100% !important;
+  table-layout: fixed !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+section.left-table table.layout-table > tbody > tr > td {
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  vertical-align: top !important;
+}
+/* Right column image should fill 40% column width */
+section.left-table table.layout-table > tbody > tr > td:nth-child(3) img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important; /* Cancel any global img max-width from base theme */
+  margin: 0 !important;
+  border: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure same behavior in print (Marp PDF export) */
+@media print {
+  section.left-table table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  section.left-table table.layout-table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+  }
+  section.left-table table.layout-table > tbody > tr > td {
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    vertical-align: top !important;
+  }
+  section.left-table table.layout-table > tbody > tr > td:nth-child(3) img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    box-sizing: border-box !important;
+  }
+}

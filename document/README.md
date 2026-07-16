@@ -2,6 +2,16 @@
 
 ---
 
+```bash
+/Users/takumi0616/Slide/document/stage2/NEP_document_stage2.md
+
+python3 -m pip install --user --upgrade pip pillow python-pptx pymupdf && python3 tools/pdf_to_pptx.py --input 'document/stage3/SITA学会発表_stage3_20251104_175700.pdf' --output 'document/stage3/SITA学会発表_stage3_20251104_175700.pptx' --dpi 300
+
+npx @marp-team/marp-cli document/stage2/NEP_document_stage2.md --theme-set /Users/takumi0616/Slide/marp-theme-company/themes/company-modern.css --output document/stage3/NEP_document_stage3.pptx --pptx --pptx-editable --allow-local-files
+
+npx @marp-team/marp-cli document/stage2/NEP_document_stage2.md --theme-set /Users/takumi0616/Slide/marp-theme-company/themes/company-modern.css --output document/stage3/NEP_document_stage3.pdf --allow-local-files
+```
+
 ## cline に投げるプロンプト例
 
 ```
